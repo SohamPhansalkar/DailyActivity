@@ -1,6 +1,7 @@
 import os
 import subprocess
 from datetime import datetime
+import sys 
 
 # Path to your local repository directory
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -8,7 +9,7 @@ REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 def run_git_command(command):
     result = subprocess.run(command, cwd=REPO_DIR, text=True, capture_output=True)
     if result.returncode != 0:
-        print(f"Error running {' '.join(command)}:\n{result.stderr}")
+        print(f"Error running {' '.join(command)}:\n{result.stderr}", file=sys.stderr)
     else:
         print(result.stdout)
 
