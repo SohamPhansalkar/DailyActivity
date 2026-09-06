@@ -18,11 +18,12 @@ def make_daily_commit():
     
     # Append current timestamp to the file
     with open(file_path, "a") as f:
-        f.write(f"Updated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Updated on: {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}\n")
     
     # Execute Git commands
+    run_git_command(["git", "pull"]) 
     run_git_command(["git", "add", "."])
-    run_git_command(["git", "commit", "-m", f"Daily update: {datetime.now().strftime('%Y-%m-%d')}"])
+    run_git_command(["git", "commit", "-m", f"Daily update: {datetime.now().strftime('%d-%m-%Y')}"])
     run_git_command(["git", "push", "origin", "main"])
 
 if __name__ == "__main__":
