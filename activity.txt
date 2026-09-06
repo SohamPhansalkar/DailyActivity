@@ -1,5 +1,8 @@
 Daily Activity Logs
 
+This file is updated every day at 00:01 by my HomeLab Server 
+This is a cron job to run my .py script so my chart is green on GitHub
+
 Updated on: 2026-09-04 17:34:11
 Updated on: 2026-09-05 18:36:20
 Updated on: 2026-09-05 18:46:56
