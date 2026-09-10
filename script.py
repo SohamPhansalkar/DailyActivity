@@ -17,7 +17,7 @@ def run_git_command(command):
 
 def make_daily_commits_3():
     activity_file = os.path.join(REPO_DIR, "activity.txt")
-    counter_file = os.path.join(REPO_DIR, "counter.json")
+    counter_file = os.path.join(REPO_DIR, "count.json")
     
     # Append current timestamp to the file
     for i in range(3):
